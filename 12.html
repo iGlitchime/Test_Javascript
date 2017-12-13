@@ -35,16 +35,15 @@
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
 
 <input id="input" type="text"/>
-<button id='button' onclick="takeTXT()"></button>
 
 <script>
-var takeTXT = function(){
-    var gettext = document.getElementById('input').value;
-    console.log(gettext);
-    document.getElementsByTagName('p')[0].innerHTML = gettext;
-
-}
-
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            var gettext = document.getElementById('input').value;
+            console.log(gettext);
+            document.getElementsByTagName('p')[0].innerHTML = gettext;
+        }
+    });
 
 </script>
 
