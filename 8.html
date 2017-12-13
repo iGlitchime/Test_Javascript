@@ -33,13 +33,41 @@
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
 <script>
-    var number = prompt('enter a number',"1337");
-    var sum = 0;
-    var arrayStr = Array.from(number);
-    for(var i = 0; i < arrayStr.length; i++){
-        sum += arrayStr[i]*1;
-        console.log(sum);
-    }
+    var phrase = prompt('enter text please');
+    var word = prompt('enter the word to search');
+    var hits = [];
+    var search = function (word) {
+        var phraseArr = phrase.split(' ');
+        for(var i = 0; i< phraseArr.length; i++){
+            if(phraseArr[i] == word){
+                hits.push(i);
+            }
+        }
+//        console.log(hits.length);
+        if( hits.length > 0 ){
+            alert('word ' + word + ' repeats in this text for ' + hits.length + ' times!');
+        }else if( hits.length <= 0){
+            alert('there was no words like ' + word);
+        }
+    };
+    search(word);
+
+
+//    for (i = 0; i < phrase.length; i++) {
+//        if (phrase[i] === word[0]) {
+//            for (var j = i; j < (word.length + i); j++) {
+//                if (phrase[j] === word[j - i]) {
+//                    hits.push(phrase[j]);
+//                }
+//            }
+//        }
+//    }
+//    if (hits.length === 0) {
+//        console.log("Your name wasn't found!");
+//    } else {
+//        console.log(hits);
+//    }
+
 </script>
 </body>
 </html>
