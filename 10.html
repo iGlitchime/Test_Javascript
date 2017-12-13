@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <h1>Hello World</h1>
@@ -32,25 +33,25 @@
 <a href="https://codepen.io/iglitchime/" class="link" id="link_2">My Codepen</a>
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
+
+<button onclick="countMinutes()">Click to know minutes till the end of the day</button>
+<div style="width: 50px; height: 50px" id="day_minutes">
+    <script>
+        function countMinutes() {
+//            var second = ( (24*60*60) - ( (hours*60*60) + (minutes*60) + seconds ) );
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var minutes = (24*60) - (hours*60) - minutes;
+            document.getElementById("day_minutes").innerHTML = minutes;
+            console.log(minutes );
+            return minutes;
+        }
+    </script>
+</div>
 <script>
-    var phrase = prompt('enter text please');
-    var word = prompt('enter the word to search');
-    var hits = [];
-    var search = function (word) {
-        var phraseArr = phrase.split(' ');
-        for(var i = 0; i< phraseArr.length; i++){
-            if(phraseArr[i] == word){
-                hits.push(i);
-            }
-        }
-//        console.log(hits.length);
-        if( hits.length > 0 ){
-            alert('word ' + word + ' repeats in this text for ' + hits.length + ' times!');
-        }else if( hits.length <= 0){
-            alert('there was no words like ' + word);
-        }
-    };
-    search(word);
+
 </script>
+
 </body>
 </html>

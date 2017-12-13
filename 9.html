@@ -32,25 +32,17 @@
 <a href="https://codepen.io/iglitchime/" class="link" id="link_2">My Codepen</a>
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
+
+<button onclick="countClicks()" style="width: 50px; height: 50px" id="button"> </button>
 <script>
-    var phrase = prompt('enter text please');
-    var word = prompt('enter the word to search');
-    var hits = [];
-    var search = function (word) {
-        var phraseArr = phrase.split(' ');
-        for(var i = 0; i< phraseArr.length; i++){
-            if(phraseArr[i] == word){
-                hits.push(i);
-            }
-        }
-//        console.log(hits.length);
-        if( hits.length > 0 ){
-            alert('word ' + word + ' repeats in this text for ' + hits.length + ' times!');
-        }else if( hits.length <= 0){
-            alert('there was no words like ' + word);
-        }
-    };
-    search(word);
+    var count = 0;
+    var countClicks = function(){
+        count = count+1;
+        console.log(count);
+        var show = document.getElementById('button');
+        return show.innerHTML = count;
+    }
 </script>
+
 </body>
 </html>
