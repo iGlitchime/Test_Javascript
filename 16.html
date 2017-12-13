@@ -34,30 +34,12 @@
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
 
-<button onclick="timer.start()">Click to start</button>
-<button onclick="timer.stop()">Click to stop</button>
-<div style="width: 50px; height: 50px" id="timer">
-    <script>
-        var started, stopped;
-        var timer = {
-            start: function () {
-                started = new Date();
-            },
-            stop: function () {
-                stopped = new Date();
-                this.countTimer(started, stopped)
-            },
-            countTimer: function (started, stopped) {
-                var resHours = stopped - started;
-                var result = Math.round(resHours / 1000);
-                console.log(Math.round(resHours / 1000));
-                document.getElementById('timer').innerHTML = result;
-            }
-        };
-    </script>
-</div>
-<script>
 
+
+<script>
+    $(document).ready(function () {
+        $('a[href*="https://"]').attr('href', '!!!');
+    });
 </script>
 
 </body>
