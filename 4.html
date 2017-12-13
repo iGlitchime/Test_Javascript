@@ -32,9 +32,55 @@
 <a href="https://codepen.io/iglitchime/" class="link" id="link_2">My Codepen</a>
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
-    <script>
-        var arr = ['Hanuka', 'Sameah'];
-        alert(arr[0] + ' ' + arr[1]);
-    </script>
+<script>
+    var arr = '';
+    var array = {
+        "en": ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+        "heb": ["yom-rishon", "yom-sheni", 'yom-shlishi', 'yom-ravii', 'yom-hamishi', 'yom-shishi', 'shabat']
+    };
+
+    var q = prompt('please choose Language - English or Hebrew (en or heb)');
+
+//    if (q == 'en' || q == 'english' || q == 'English') {
+//        arr = array.en;
+//        alert(arr);
+//    } else if (q == 'heb' || q == 'hebrew' || q == 'Hebrew') {
+//        arr = array.heb;
+//        alert(arr);
+//    } else {
+//        alert('i do not have this language in the base');
+//    }
+
+    switch(q){
+        case 'en':
+            arr = array.en;
+            alert(arr);
+            break;
+        case 'english':
+            arr = array.en;
+            alert(arr);
+            break;
+        case 'English':
+            arr = array.en;
+            alert(arr);
+            break;
+        case 'heb':
+            arr = array.heb;
+            alert(arr);
+            break;
+        case 'hebrew':
+            arr = array.heb;
+            alert(arr);
+            break;
+        case 'Hebrew':
+            arr = array.heb;
+            alert(arr);
+            break;
+        default:
+            alert('i do not have this language in the base');
+    }
+
+
+</script>
 </body>
 </html>

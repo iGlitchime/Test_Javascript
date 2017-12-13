@@ -33,8 +33,10 @@
 <a href="https://www.linkedin.com/in/irena-tsibizova-968342107/" class="link" id="link_3">My Linked In Account</a>
 <a href="https://www.facebook.com/irena.neidlin" class="link" id="link_4">My Facebook</a>
     <script>
-        var arr = ['Hanuka', 'Sameah'];
-        alert(arr[0] + ' ' + arr[1]);
+        var arr = {"en":['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+                "heb":["yom-rishon","yom-sheni", 'yom-shlishi', 'yom-ravii', 'yom-hamishi', 'yom-shishi', 'shabat']};
+
+        alert(arr.en[1] + ' ' + arr.heb[3]);
     </script>
 </body>
 </html>
